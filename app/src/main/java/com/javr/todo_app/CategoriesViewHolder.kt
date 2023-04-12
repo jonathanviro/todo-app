@@ -9,19 +9,34 @@ class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val tvCategoryName: TextView = view.findViewById(R.id.tvCategoryName)
     private val divider: View = view.findViewById(R.id.divider)
 
-    fun render(taskCategory: TaskCategory){
-        when(taskCategory){
+    fun render(taskCategory: TaskCategory) {
+        when (taskCategory) {
             TaskCategory.Business -> {
                 tvCategoryName.text = "Negocios"
-                divider.setBackgroundColor(ContextCompat.getColor(divider.context, R.color.todo_business_category))
+                divider.setBackgroundColor(
+                    ContextCompat.getColor(
+                        divider.context,
+                        R.color.todo_business_category
+                    )
+                )
             }
             TaskCategory.Other -> {
                 tvCategoryName.text = "Otros"
-                divider.setBackgroundColor(ContextCompat.getColor(divider.context, R.color.todo_other_category))
+                divider.setBackgroundColor(
+                    ContextCompat.getColor(
+                        divider.context,
+                        R.color.todo_other_category
+                    )
+                )
             }
             TaskCategory.Personal -> {
                 tvCategoryName.text = "Personal"
-                divider.setBackgroundColor(ContextCompat.getColor(divider.context, R.color.todo_personal_category))
+                divider.setBackgroundColor(
+                    ContextCompat.getColor(
+                        divider.context,
+                        R.color.todo_personal_category
+                    )
+                )
             }
         }
     }
